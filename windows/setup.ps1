@@ -1,7 +1,6 @@
 # Setup file for windows - by phucho0237
 # Last edit: 2023-12-12 12:00
 
-Write-Host("5 second(s) waiting...")
 Start-Sleep -Seconds 5
 
 # Chocolatey setup
@@ -15,3 +14,4 @@ else {
    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
    iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 }
+Write-Host("Done")
