@@ -19,3 +19,5 @@ Write-Host("Done")
 ### Important Package
 # DirectX Runtime
 winget install -e --id Microsoft.DirectX
+
+Pause
