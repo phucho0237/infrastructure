@@ -1,4 +1,4 @@
-New-Item -ItemType Directory -Path C:\Infrastructure
+mkdir C:\Infrastructure | Out-Null
 
 $githubScriptUrl = "https://raw.githubusercontent.com/phucho0237/infrastructure/main/windows/setup.ps1"
 
