@@ -1,5 +1,5 @@
 # Setup file for windows - by phucho0237
-# Last edit: 2023-12-12 12:00
+# Last edit: 2023-12-12 12:40
 
 Start-Sleep -Seconds 5
 
