@@ -1,9 +1,9 @@
-# Setup file for windows - by phucho0237
-# Last edit: 2023-12-12 12:40
+### Setup file for windows - by phucho0237
+### Last edit: 2023-12-12 12:40
 
 Start-Sleep -Seconds 5
 
-# Chocolatey setup
+### Chocolatey Setup
 Write-Host("Installing Chocolatey...")
 if (Get-Command -Name choco -ErrorAction SilentlyContinue) 
 {
@@ -15,3 +15,7 @@ else {
    iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 }
 Write-Host("Done")
+
+### Important Package
+# DirectX Runtime
+winget install -e --id Microsoft.DirectX
