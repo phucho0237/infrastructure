@@ -1,6 +1,9 @@
 # Setup file for windows - by phucho0237
 # Last edit: 2023-12-12 12:00
 
+Write-Host("5 second(s) waiting...")
+Start-Sleep -Seconds 5
+
 # Chocolatey setup
 Write-Host("Installing Chocolatey...")
 if (Get-Command -Name choco -ErrorAction SilentlyContinue) 
