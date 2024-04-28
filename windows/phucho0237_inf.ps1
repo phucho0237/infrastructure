@@ -12,16 +12,18 @@ if (-not (Test-Path -Path $tempFolder)) {
     Write-Host `[INIT] Folder existed at $tempFolder`
 }
 
-# Check if chocolatey is installed or not
+# Check If Chocolatey Is Installed Or Not
 $chocoFolder = Join-Path -Path C:\ProgramData -ChildPath "chocolatey"
 
 if (Test-Path -Path $chocoFolder) {
-    Write-Host `[PKG] Chocolatey was installed in this system. Skipping...
+    Write-Host "[PKG] Chocolatey was installed in this system. Skipping..."
 }
 else {
-    # Install chocolatey
-    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-    Write-Host "[PKG] Chocolatey installation completed."
+    # Install Chocolatey
+    Write-Host "[PKG] Chocolatey not detected, installing..."
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+    iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    Write-Host "[PKG] Chocolatey installation completed"
 }
 
 Pause
