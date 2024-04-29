@@ -47,7 +47,7 @@ if (-not (Test-Path -Path $dxDownloadPath)) {
     Invoke-Webrequest -Uri $directxUrl -OutFile $dxDownloadPath
 }
 
-# Wait 5 seconds
+# Wait 3 seconds
 Start-Sleep -Seconds 3
 
 Start-Process -FilePath $dxDownloadPath -Wait
